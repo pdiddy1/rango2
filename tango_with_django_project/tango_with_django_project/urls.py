@@ -9,4 +9,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+	#mapping below looks for url strings that matches the patterns ^rango/
+	#when a match is made, the remainder of the url string is then passed 
+	#onto and handled by rango.urls
+    url(r'^rango/', include('rango.urls')),
 )
