@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,6 +31,20 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+	#put strings here, like "/home/html/django/templates"
+	#always use forward slashes
+	#use absolute paths, not relative paths
+	TEMPLATE_PATH,
+)
+
+STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+	STATIC_PATH,
+)
 
 # Application definition
 
