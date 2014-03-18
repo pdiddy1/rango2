@@ -46,6 +46,11 @@ STATICFILES_DIRS = (
 	STATIC_PATH,
 )
 
+MEDIA_URL = '/media/'
+#absolute path to media directory
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') 
+
+
 # Application definition
 
 INSTALLED_APPS = (

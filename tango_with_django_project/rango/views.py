@@ -14,7 +14,7 @@ def index(request):
 	#note the key boldmessage is the same as the {{bold message}} in the template
 	context_dict = {'boldmessage': "I am bold font from the context."}
 	
-	#return a rendered response to send to the clinet. use the shortcut function
+	#return a rendered response to send to the client. use the shortcut function
 	#note that the first parameter is the template we wish to use.
 	return render_to_response('rango/index.html', context_dict, context)
 	
